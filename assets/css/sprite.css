@@ -16,9 +16,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
-.icon-vip {
+.icon-border-line {
   background-image: url(../img/sprite.png);
   background-position: 0px 0px;
+  width: 2px;
+  height: 12px;
+}
+.icon-vip {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -12px;
   width: 40px;
   height: 40px;
 }
