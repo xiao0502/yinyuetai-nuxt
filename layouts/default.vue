@@ -1,16 +1,16 @@
 <template>
-    <div class="layouts-defalut">
-        <my-head></my-head>
+    <div class="container">
+        <normal-header></normal-header>
         <nuxt/>
     </div>
 </template>
 
 <script type="es6">
-	import MyHead from '~/components/my-head.vue'
+	import NormalHeader from '~/components/normal-header.vue'
 
 	export default {
 		components: {
-			MyHead
+			NormalHeader
 		}
 	}
 </script>

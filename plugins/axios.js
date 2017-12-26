@@ -1,9 +1,31 @@
-import * as axios from 'axios'
+import Vue from 'vue'
+import axios from 'axios'
+import qs from 'qs'
 
-let options = {}
-// The server-side needs a full url to works
-if (process.server) {
-  options.baseURL = `http://${process.env.HOST || 'localhost'}:${process.env.PORT || 3000}`
+axios.defaults.baseURL = '/api';
+
+Vue.prototype.$get = (url, params) => {
+	const commonParams = Object.assign({}, params);
+
+	return new Promise((resolve, reject) => {
+		axios.get(url, {params: commonParams}).then(res => {
+			resolve(res.data)
+		}, err => {
+			reject(err)
+		}).catch(error => {
+			console.log(error);
+		})
+	})
 }
 
-export default axios.create(options)
+Vue.prototype.$post = (url, params, isForm) => {
+	return new Promise((resolve, reject) => {
+		axios.post(url, isForm ? qs.stringify(params) : params).then(res => {
+			resolve(res.data)
+		}, err => {
+			reject(err)
+		}).catch(error => {
+			console.log(error);
+		})
+	})
+}

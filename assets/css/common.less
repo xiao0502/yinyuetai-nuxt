@@ -1,34 +1,6 @@
-.container {
-    max-width: 1560px;
-    min-width: 960px;
-    margin:  0 auto;
+.page-enter-active, .page-leave-active {
+    transition: opacity .1s;
 }
-.fl {
-    float: left;
-}
-.fr {
-    float: right;
-}
-.clearfix {
-    zoom: 1;
-    &:after {
-        content: '';
-        display: block;
-        height: 0;
-        clear: both;
-        overflow: hidden;
-    }
-}
-.icon {
-    display: inline-block;
-}
-.extends {
-    position: relative;
-    &:after {
-        position: absolute;
-        left: -5px;
-        top: -5px;
-        bottom: -5px;
-        right: -5px;
-    }
+.page-enter, .page-leave-active {
+    opacity: 0;
 }
