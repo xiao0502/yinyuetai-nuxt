@@ -81,10 +81,11 @@
 					},
 					on: {
 						slideChange() {
+							alert(1)
 						},
 						click(e) {
-							alert(e.path[1].getAttribute('data-url'))
-							window.location.href = e.path[1].getAttribute('data-url')
+//							alert(e.path[1].getAttribute('data-url'))
+//							window.location.href = e.path[1].getAttribute('data-url')
 						}
 					}
 				}
