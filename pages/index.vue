@@ -82,7 +82,7 @@
 					on: {
 						slideChange() {
 						},
-						tap(e) {
+						click(e) {
 							alert(e.path[1].getAttribute('data-url'))
 							window.location.href = e.path[1].getAttribute('data-url')
 						}
@@ -93,19 +93,8 @@
 		mounted() {
 			new BScroll(this.$refs.scroll, {
 				click: true,
-//				tap: 'myCustomTapEvent'
 			})
-            alert(window.location)
-		},
-		methods: {
-//			myCustomTapEvent() {
-//				console.log(123);
-//			}
-		},
-		components: {
-//			Swiper
 		}
-
 	}
 </script>
 

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9b8a1d4-3a6e-45f3-bf62-1d05a5bf8dea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.vue" afterPath="$PROJECT_DIR$/pages/index.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,20 +16,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
+            <state relative-caret-position="132">
+              <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
               <folding>
-                <element signature="e#3744#5401#0" expanded="false" />
-                <element signature="e#5415#6797#0" expanded="false" />
+                <element signature="e#3572#5229#0" expanded="false" />
+                <element signature="e#5243#6625#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -121,8 +119,8 @@
         <option value="$PROJECT_DIR$/.nuxt/utils.js" />
         <option value="$PROJECT_DIR$/plugins/swiper.js" />
         <option value="$PROJECT_DIR$/nuxt.config.js" />
-        <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pages/index.vue" />
       </list>
     </option>
   </component>
@@ -239,12 +237,12 @@
       <workItem from="1514256396075" duration="12817000" />
       <workItem from="1514296677111" duration="53000" />
       <workItem from="1514296829575" duration="3247000" />
-      <workItem from="1514378005918" duration="3701000" />
+      <workItem from="1514378005918" duration="3928000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39472000" />
+    <option name="totallyTimeSpent" value="39699000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
@@ -286,8 +284,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3744#5401#0" expanded="false" />
-            <element signature="e#5415#6797#0" expanded="false" />
+            <element signature="e#3572#5229#0" expanded="false" />
+            <element signature="e#5243#6625#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -329,8 +327,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3744#5401#0" expanded="false" />
-            <element signature="e#5415#6797#0" expanded="false" />
+            <element signature="e#3572#5229#0" expanded="false" />
+            <element signature="e#5243#6625#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -372,8 +370,8 @@
         <state relative-caret-position="69">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding>
-            <element signature="e#3744#5401#0" expanded="false" />
-            <element signature="e#5415#6797#0" expanded="false" />
+            <element signature="e#3572#5229#0" expanded="false" />
+            <element signature="e#5243#6625#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -547,22 +545,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
-          <folding>
-            <element signature="e#3744#5401#0" expanded="false" />
-            <element signature="e#5415#6797#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="81" column="25" lean-forward="true" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
+          <folding>
+            <element signature="e#3572#5229#0" expanded="false" />
+            <element signature="e#5243#6625#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
