@@ -4,7 +4,7 @@
             <div v-swiper:mySwiper="swiperOption">
                 <div class="swiper-wrapper my-wrapper">
                     <div class="swiper-slide my-slide" v-for="banner in bannerList">
-                        <a :href="banner.url">
+                        <a :data-url="banner.url" href="javascript:void(0)">
                             <img :src="banner.img">
                         </a>
                     </div>
@@ -69,7 +69,7 @@
 				hotList: [],
 				swiperOption: {
 					loop: true,
-					autoplay: true,
+//					autoplay: true,
 					slidesPerView: 'auto',
 					centeredSlides: true,
 					spaceBetween: 10,
@@ -81,10 +81,9 @@
 					},
 					on: {
 						slideChange() {
-							console.log('onSlideChangeEnd', this);
 						},
-						tap() {
-							console.log('onTap', this);
+						tap(e) {
+							window.location.href = e.path[1].getAttribute('data-url')
 						}
 					}
 				}
@@ -92,8 +91,14 @@
 		},
 		mounted() {
 			new BScroll(this.$refs.scroll, {
-				click: true
+				click: true,
+//				tap: 'myCustomTapEvent'
 			})
+		},
+		methods: {
+//			myCustomTapEvent() {
+//				console.log(123);
+//			}
 		},
 		components: {
 //			Swiper
@@ -203,6 +208,9 @@
             }
         }
         .my-slide {
+            a {
+                display: block;
+            }
             img {
                 width: 100%;
             }
