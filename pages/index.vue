@@ -83,6 +83,7 @@
 						slideChange() {
 						},
 						tap(e) {
+							alert(e.path[1].getAttribute('data-url'))
 							window.location.href = e.path[1].getAttribute('data-url')
 						}
 					}
@@ -94,6 +95,7 @@
 				click: true,
 //				tap: 'myCustomTapEvent'
 			})
+            alert(window.location)
 		},
 		methods: {
 //			myCustomTapEvent() {
