@@ -31,24 +31,32 @@ module.exports = {
 	** Global CSS
 	*/
 	css: [
+		'swiper/dist/css/swiper.css',
 		{src: '~/assets/css/index.less', lang: 'less'},
-		'swiper/dist/css/swiper.css'
+
 	],
 	plugins: [
-		'~/plugins/axios'
+		'~/plugins/axios',
+		{src: '~/plugins/swiper.js', ssr: false}
 	],
 	/*
 	** Add axios globally
 	*/
 	build: {
-		vendor: ['better-scroll'],
+		vendor: ['better-scroll','vue-awesome-swiper'],
 		/*
 		** Run ESLINT on save
 		*/
-		extend(config, ctx) {
-			vuxLoader.merge(config, {
+		extend(webpackConfig, {isDev, isClient, isServer}) {
+			vuxLoader.merge(webpackConfig, {
 				plugins: ['vux-ui']
 			})
+			// 处理 Swiper4 下的 dom7 模块的语法问题
+			webpackConfig.resolve.alias['swiper$'] = 'swiper/dist/js/swiper.js'
+			webpackConfig.resolve.alias['dom7$'] = 'dom7/dist/dom7.js'
+		},
+		babel: {
+			// "presets": ["es2015"]
 		}
 	},
 	modules: [

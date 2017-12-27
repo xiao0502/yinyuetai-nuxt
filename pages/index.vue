@@ -1,7 +1,17 @@
 <template>
     <div ref="scroll" class="page-index">
         <div :data="data.songList" class="scroll-content">
-            <swiper loop auto :list="bannerList"></swiper>
+            <div v-swiper:mySwiper="swiperOption">
+                <div class="swiper-wrapper my-wrapper">
+                    <div class="swiper-slide my-slide" v-for="banner in bannerList">
+                        <a :href="banner.url">
+                            <img :src="banner.img">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-bullets"></div>
+            </div>
+            <!--<swiper loop auto :list="bannerList"></swiper>-->
             <div class="diantai">
                 <h2>电台</h2>
                 <ul>
@@ -33,7 +43,7 @@
 </template>
 <script type="es6">
 	import BScroll from '~/plugins/bscroll'
-	import Swiper from 'vux/src/components/swiper/swiper.vue'
+	//	import Swiper from 'vux/src/components/swiper/swiper.vue'
 
 	export default {
 		async asyncData({app}) {
@@ -56,7 +66,28 @@
 			return {
 				bannerList: [],
 				diantaiList: [],
-				hotList: []
+				hotList: [],
+				swiperOption: {
+					loop: true,
+					autoplay: true,
+					slidesPerView: 'auto',
+					centeredSlides: true,
+					spaceBetween: 10,
+					wrapperClass: 'my-wrapper',
+					slideClass: 'my-slide',
+					pagination: {
+						el: '.swiper-pagination',
+						dynamicBullets: true
+					},
+					on: {
+						slideChange() {
+							console.log('onSlideChangeEnd', this);
+						},
+						tap() {
+							console.log('onTap', this);
+						}
+					}
+				}
 			}
 		},
 		mounted() {
@@ -65,7 +96,7 @@
 			})
 		},
 		components: {
-			Swiper
+//			Swiper
 		}
 
 	}
@@ -170,6 +201,14 @@
                     }
                 }
             }
+        }
+        .my-slide {
+            img {
+                width: 100%;
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #31c27c;
         }
     }
 </style>
