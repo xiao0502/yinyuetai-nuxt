@@ -4,9 +4,7 @@
             <div v-swiper:mySwiper="swiperOption">
                 <div class="swiper-wrapper my-wrapper">
                     <div class="swiper-slide my-slide" v-for="banner in bannerList">
-                        <a :data-url="banner.url" href="javascript:void(0)">
-                            <img :src="banner.img">
-                        </a>
+                        <img :data-url="banner.url" :src="banner.img">
                     </div>
                 </div>
                 <div class="swiper-pagination swiper-pagination-bullets"></div>
@@ -80,12 +78,8 @@
 						dynamicBullets: true
 					},
 					on: {
-						slideChange() {
-//							alert(1)
-						},
-						click(e) {
-							alert(e.path[1].getAttribute('data-url'))
-//							window.location.href = e.path[1].getAttribute('data-url')
+						tap(e) {
+							location.href = e.path[0].getAttribute('data-url')
 						}
 					}
 				}
@@ -94,8 +88,13 @@
 		mounted() {
 			new BScroll(this.$refs.scroll, {
 				click: true,
+//				tap: 'xiao',
 			})
-		}
+			document.addEventListener('xiao', function (e) {
+				console.log(e);
+			}, false)
+		},
+		methods: {}
 	}
 </script>
 

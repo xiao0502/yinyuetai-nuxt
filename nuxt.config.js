@@ -37,13 +37,14 @@ module.exports = {
 	],
 	plugins: [
 		'~/plugins/axios',
-		{src: '~/plugins/swiper.js', ssr: false}
+		{src: '~/plugins/swiper.js', ssr: false},
+		// '~/plugins/document.js'
 	],
 	/*
 	** Add axios globally
 	*/
 	build: {
-		vendor: ['better-scroll','vue-awesome-swiper'],
+		vendor: ['better-scroll', 'vue-awesome-swiper'],
 		/*
 		** Run ESLINT on save
 		*/
